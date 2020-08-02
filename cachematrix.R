@@ -1,4 +1,5 @@
-## Implement caching the inverse of a matrix to avoid computing compute it repeatedly.
+## Implement caching to avoid computing inverse of a matrix repeatedly.
+## Below are a pair of functions that are used to create a special object that stores a matrix and caches its inverse.
 ## Assume that the matrix supplied is always invertible.
 
 ## This function creates a special "matrix" object that can cache its inverse.
@@ -15,7 +16,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 ## This function computes the inverse of the special "matrix" returned by makeCacheMatrix above.
-## If the inverse has already been calculated (and the matrix has not changed), then the cachesolve should retrieve the inverse from the cache.
+## If the inverse has already been calculated (and the matrix has not changed),
+## then the cachesolve should retrieve the inverse from the cache.
 cacheSolve <- function(x, ...) {
     m <- x$getinverse()
     if (!is.null(m)) {
